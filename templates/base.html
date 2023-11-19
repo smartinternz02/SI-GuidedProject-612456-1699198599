@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IgniFit</title>
+  <link rel="stylesheet" href="/static/st.css">
+  {% block styles %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+      <a href="/" class="logo">IgniFit</a>
+      <nav class="navbar">
+        <a href="{{ url_for('main') }}">Home</a>
+        <a href="https://drive.google.com/file/d/1Ef9c78MWwIltVImbmDR2mwQ3By6ehoGU/view" target="_blank">About us</a>
+        <a href="#section-howitworks">How it works</a>
+        <a href="#section-contactus">Contact us</a>
+        {% block dashpred %}{% endblock %}
+      </nav>
+
+    </header>
+
+    {% block content %}
+    
+    {% endblock %}
+  
+  </body>
+</html>

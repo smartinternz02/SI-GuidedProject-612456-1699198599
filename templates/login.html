@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="login-reg-form">
+        <div id="login-form" class="lr-form">
+            <h2>Login</h2>
+            <form action="{{ url_for('login') }}" method="POST">
+                <input type="text" name="uid" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button class="new-user" type="button" onclick="toggleForm('register')">New User ? Register</button>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-container">
+                        <ul class="flashes">
+                            {% for message in messages %}
+                                <li class="flash-{{ message.category }}">{{ message }}
+                                    <button class="close-button" onclick="this.parentElement.style.display='none';">×</button>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div id="register-form" class="lr-form">
+            <h2>Register</h2>
+            <form action="{{ url_for('register') }}" id="actual-reg-form" method="POST" disabled>
+                <input type="text" name="uid" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="number" name="age" placeholder="Age" required>
+                <input type="number" name="height" placeholder="Height" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

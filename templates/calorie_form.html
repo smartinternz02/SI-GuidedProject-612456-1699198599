@@ -1,0 +1,75 @@
+<section class="home2">
+  <div id="section1" class="leader">
+    
+    <h1>calorie prediction</h1>
+    <form method="post">
+    <div class="rowline">
+      
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" name="gender" required="required" value="{{ gender }}">
+            <span class="number">Gender(0-male,1-female)</span>
+            <span class="line"></span>
+          </div>
+        </div>
+    
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" step="0.01" name="age" required="required" value="{{ age }}">
+            <span class="number">Age</span>
+            <span class="line"></span>
+          </div>
+        </div>
+    </div>
+    <div class="rowline">
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" step="0.01" name="height" inputmode="decimal" required="required" value="{{ height }}">
+            <span class="number">Height(in cm)</span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" step="0.01" name="duration"inputmode="decimal"  required="required">
+            <span class="number">Exercise Duration(in mins)</span>
+            <span class="line"></span>
+          </div>
+        </div>
+    </div>
+    <div class="rowline">
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" name="heart_rate" inputmode="decimal" required="required">
+            <span class="number">Heart Rate</span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="inputcol">
+          <div class="inputfield">
+            <input type="number" step="0.01" name="temperature" inputmode="decimal" required="required">
+            <span class="number">Body Temperature(in celsius)</span>
+            <span class="line"></span>
+          </div>
+        </div>
+    </div>
+    <div class="rowline">
+      <div class="inputcol">
+        <div class="inputfield">
+          <input type="text" name="e_name" value="Unnamed">
+          <span class="text">Exercise Name</span>
+          <span class="line"></span>
+        </div>
+      </div>
+  </div>
+
+  <div class="rowline">
+    <div class="inputcol">
+      <div class="submit-btn">
+        <input type="submit" value="submit">
+      </div>
+    </div>
+  </div>
+  </form>
+  </div>
+</section>

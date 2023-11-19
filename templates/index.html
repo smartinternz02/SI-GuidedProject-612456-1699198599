@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="home">
+  <div class="homedes">
+    
+    <h1>IgniFit    </h1>
+    <h3>Calorie Burnt predictor</h3>
+    <p>
+      Predicting calorie burn through machine learning involves utilizing sophisticated algorithms to estimate the energy expenditure of an individual during a specific activity or timeframe. This intricate process relies on diverse data inputs, such as heart rate, duration, and potentially other biometric factors. Through the training of models on extensive datasets, the algorithm attains proficiency in making precise predictions. This cutting-edge technology holds immense promise for personalized fitness monitoring, empowering users to scrutinize and optimize their energy output for enhanced health and fitness results. It facilitates individuals in making well-informed decisions regarding their physical activity levels and dietary selections, fostering a more well-rounded and health-conscious lifestyle.
+    </p>
+        <div class="btn-box">
+          <a href="{{ url_for ('login') }}">Login</a>
+          <a href="#section1">Guest login</a>
+          
+        </div>
+      </div>
+    </section>
+    
+
+    {% include 'calorie_form.html' %}
+    {% if calories %}
+      <h2 style="text-align: center;">Calories Burnt: {{ calories }}</h2>
+    {% endif %}
+    
+    <section class="home1">
+      <div id="section-contactus" class="leader">
+        <h1>Contact Us</h1>
+        <form action="https://formsubmit.co/thecalpredapp@gmail.com" method="POST">
+          <div class="rowline">
+            <div class="inputcol">
+              <div class="inputfield">
+                <input type="text" name="first_name" required="required">
+                <span class="text">First Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="inputcol">
+              <div class="inputfield">
+                <input type="text" name="last_name" required="required">
+                <span class="text">Last Name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="rowline">
+            <div class="inputcol">
+              <div class="inputfield">
+                <input type="text" name="email" required="required">
+                <span class="text">Email</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="inputcol">
+              <div class="inputfield">
+                <input type="text" name="mobile_no" required="required">
+                <span class="text">Mobile no</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="rowline">
+            <div class="inputcol">
+              <div class="inputfield">
+                
+                <input type="text" name="query" required="required">
+                <span class="text">Type your query here...</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rowline">
+            <div class="inputcol">
+              <div class="submit-btn">
+                <input type="submit" value="send">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="home3">
+      <div id="section-howitworks" class = homedes2>
+        <h1>How it works</h1>
+        <p>  
+          Welcome to our unique fitness experience! Whether you decide to create an account or explore our platform anonymously, we gather essential data to understand your body and fitness status. Utilizing an advanced machine learning algorithm, our platform processes the information you provide.<br>This algorithm has undergone extensive training on a diverse range of inputs to accurately predict the calories expended during various workout activities. Tailored to your profile and workout specifics, our system calculates the approximate number of calories burned. This personalized analysis considers your distinctive attributes, ensuring a more precise outcome compared to generic calculators.<br>Prefer not to register? No problem! You can still benefit from our platform as a guest. Simply input your workout details, and our system will generate a calorie estimate without requiring any personal information. Your privacy is paramount as our platform seamlessly adapts to your preferences.
+        </p>
+        <div class="btn-box"> 
+          <a href="#section-howitworks">Get the Code</a>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
