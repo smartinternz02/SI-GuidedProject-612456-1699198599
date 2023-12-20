@@ -1,4 +1,5 @@
 IgniFit
+
 -> Project Overview:
 
 The Calorie Burn Prediction System is a web application that provides  accurate estimates of calorie consumption based on the user's physical activity. Users enter data manually, including  personal data such as occupation, duration, age, weight and height. The system uses machine learning algorithms to analyze these inputs and predict energy consumption.The user interface includes a simple dashboard that displays historical and real-time  calorie consumption data. 
